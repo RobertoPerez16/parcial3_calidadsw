@@ -19,7 +19,7 @@ class CreatePeliculasTable extends Migration
             $table->string('creditos', 250);
             $table->string('pais', 50);
             $table->string('banda_anuncio', 50);
-            $table->integer('duracion');
+            $table->string('duracion');
             $table->string('director', 100);
 
             $table->timestamps();

@@ -44,7 +44,7 @@ class PeliculaController extends Controller
         //
         $validator = Validator::make($request->all(), [
             'nombre' => 'required|string|between:2,100',
-            'duracion' => 'required|integer',
+            'duracion' => 'required|string|between:2,100',
             'creditos' => 'required|string|between:2,100',
             'director' => 'required|string|between:2,100',
             'pais' => 'required|string|between:2,100',
