@@ -51,7 +51,7 @@ class ClienteController extends Controller
 
         $cliente = Cliente::where('cedula','=',$request->get('cedula'))->get();
 
-        if (empty($cliente)) {
+        if (sizeof($cliente) === 0) {
             $cliente = Cliente::create($validator->validated());
             return response()->json([
                 'cliente' => $cliente,
