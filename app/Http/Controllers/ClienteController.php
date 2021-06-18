@@ -49,7 +49,7 @@ class ClienteController extends Controller
             return response()->json($validator->errors(), 400);
         }
 
-        $cliente = Cliente::where('cedula','=',$request->get('cedula'));
+        $cliente = Cliente::where('cedula','=',$request->get('cedula'))->get();
 
         if (empty($cliente)) {
             $cliente = Cliente::create($validator->validated());
