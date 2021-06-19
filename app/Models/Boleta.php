@@ -11,6 +11,8 @@ class Boleta extends Model
     protected $fillable = [
         'cantidad',
         'tipo_boleta',
+        'metodo_pago',
+        'precio',
         'cliente_id',
         'sala_id',
     ];

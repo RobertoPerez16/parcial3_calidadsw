@@ -17,6 +17,8 @@ class CreateBoletasTable extends Migration
             $table->id();
             $table->integer('cantidad');
             $table->string('tipo_boleta');
+            $table->string('metodo_pago');
+            $table->string('precio');
             $table->foreignId('cliente_id')->constrained('clientes')->onDelete('cascade');
             $table->foreignId('sala_id')->constrained('salas')->onDelete('cascade');
             $table->timestamps();
