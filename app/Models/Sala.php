@@ -21,7 +21,7 @@ class Sala extends Model
     ];
 
     public function teatro () {
-        return $this->belongsTo(Teatro::class, 'sala_id');
+        return $this->belongsTo(Teatro::class, 'id');
     }
 
     public function peliculas () {
