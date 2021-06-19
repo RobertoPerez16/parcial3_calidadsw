@@ -45,6 +45,8 @@ class BoletaController extends Controller
            'cantidad' => 'required|integer',
            'tipo_boleta' => 'required|string|between:2,100',
            'cliente_id' => 'required|integer',
+           'metodo_pago' => 'required|string|between:2,100',
+           'precio' => 'required|string|between:2,100',
            'sala_id' => 'required|integer'
         ]);
 
